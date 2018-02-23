@@ -1,6 +1,7 @@
 mkdir download/windows -Force >$null
 
 cd download
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 if (!(Test-Path "nuget.exe"))
 {
